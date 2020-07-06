@@ -1,11 +1,15 @@
 <resources>
-    <string name="app_name">SpinBottle</string>
+    <string name="app_name">Spin and Win</string>
+    <string name="welcome"> Spin and Win </string>
     <string name="spin_bottle">Spin Bottle</string>
     <string name="spinning_bottle">Spinning Bottle</string>
+    <string name="choice"> Whoopsie! \nMake a choice then? </string>
     <string name="start_game">Start Game</string>
     <string name="saleha">Saleha</string>
     <string name="usama">Usama</string>
     <string name="zain">Zain</string>
-    <string name="enter_3_names">Enter 3 names</string>
+    <string name="enter_3_names">Enter 4 names: </string>
     <string name="sadia">Sadia</string>
+    <string name="truth">Truth? </string>
+    <string name="dare">Dare? </string>
 </resources>

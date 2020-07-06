@@ -1,5 +1,6 @@
 package com.example.spinbottle;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,16 +21,20 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private Random random = new Random();
     private float lastDirection;
+    String name1;
+    String name2;
+    String name3;
+    String name4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Bundle extras = getIntent().getExtras();
-        String name1 = extras.getString("Name1");
-        String name2 = extras.getString("Name2");
-        String name3 = extras.getString("Name3");
-        String name4 = extras.getString("Name4");
+        name1 = extras.getString("Name1");
+        name2 = extras.getString("Name2");
+        name3 = extras.getString("Name3");
+        name4 = extras.getString("Name4");
 
         TextView tView1=findViewById(R.id.textView1);
         TextView tView2=findViewById(R.id.textView2);
@@ -62,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         tView2.setTextColor(Color.BLUE);
         tView3.setTextColor(Color.BLUE);
         tView4.setTextColor(Color.BLUE);
+
+
 
         float  newDirection = random.nextInt(3600);
         int dir= (int)Math.abs(newDirection)%360;
@@ -102,8 +109,13 @@ public class MainActivity extends AppCompatActivity {
 
                 turnL.setTextColor(Color.RED);
                 button.setEnabled(true);
-
                 Toast.makeText(getApplicationContext(),turnL.getText().toString()+"\'s turn",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(), Choice.class);
+                i.putExtra("Name1", name1);
+                i.putExtra("Name2", name2);
+                i.putExtra("Name3", name3);
+                i.putExtra("Name4", name4);
+                startActivity(i);
             }
 
             @Override
@@ -113,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         });
         lastDirection = newDirection;
         imageView.startAnimation(rotate);
+
     }
 }
 
