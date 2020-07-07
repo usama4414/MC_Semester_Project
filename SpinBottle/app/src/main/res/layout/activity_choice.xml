@@ -33,8 +33,6 @@
             />
 
 
-
-
         <Button
             android:id="@+id/btn_dare"
             android:layout_width="180dp"
