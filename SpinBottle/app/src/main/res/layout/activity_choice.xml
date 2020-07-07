@@ -1,12 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/sponge"
-    tools:context=".Choice">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sponge"
+        tools:context=".Choice">
 
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="@string/choice"
+            android:textSize="40sp"
+            android:textColor="@color/Chocolate"
+            android:textStyle="bold"
+            />
 
+        <Button
+            android:id="@+id/btn_truth"
+            android:layout_width="180dp"
 
-</RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="305dp"
+            android:background="@color/BurlyWood"
+            android:text="@string/truth"
+            android:textSize="40sp"
+            />
+
+        <Button
+            android:id="@+id/btn_dare"
+            android:layout_width="180dp"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="220dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="305dp"
+            android:background="@color/Plum"
+            android:text="@string/dare"
+            android:textSize="40sp"
+            />
+
+    </RelativeLayout>
