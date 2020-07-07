@@ -25,7 +25,7 @@ public class Splash extends AppCompatActivity {
                     rotate= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate);
                     iv.setVisibility(View.VISIBLE);
                     iv.startAnimation(rotate);
-                    sleep(4000);
+                    sleep(3000);
                 }
                 catch(Exception e)
                 {

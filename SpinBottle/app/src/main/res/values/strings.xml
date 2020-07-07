@@ -10,6 +10,7 @@
     <string name="zain">Zain</string>
     <string name="enter_3_names">Enter 4 names: </string>
     <string name="sadia">Sadia</string>
+    <string name="prompt">Enter here…</string>
     <string name="truth">Truth? </string>
     <string name="dare">Dare? </string>
 </resources>

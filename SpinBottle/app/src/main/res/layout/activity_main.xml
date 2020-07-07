@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgr"
     tools:context=".MainActivity">
 
     <ImageView
@@ -21,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.279"
-        app:srcCompat="@drawable/spin" />
+        app:srcCompat="@drawable/spin1" />
 
     <Button
         android:id="@+id/button"
@@ -34,12 +35,13 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/customize_button"
         android:text="@string/spin_bottle"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/Chocolate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintVertical_bias="0.379"
+        />
 
     <TextView
         android:id="@+id/textView1"
@@ -53,7 +55,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.285"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="15sp"
+        android:background="@drawable/my_border"
+        android:textSize="20sp"
+        android:padding="5dp"
         />
 
 
@@ -62,12 +66,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/saleha"
+        android:layout_marginRight="5dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/my_border"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="15sp"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:layout_marginEnd="5dp"
         />
 
     <TextView
@@ -81,22 +89,26 @@
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/textView1"
         app:layout_constraintVertical_bias="0.0"
+        android:background="@drawable/my_border"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="15sp"
+        android:textSize="20sp"
+        android:padding="5dp"
         />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="61dp"
-        android:layout_height="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/usama"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.804"
+        android:background="@drawable/my_border"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="15sp"
+        android:textSize="20sp"
+        android:padding="5dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

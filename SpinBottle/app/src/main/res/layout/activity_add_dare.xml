@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddDare">
+
+    <EditText
+        android:id="@+id/myDare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="50dp"
+        android:padding="8dp"
+        android:hint="@string/prompt"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"/>
+    <Button
+        android:id="@+id/btn_add_dare"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="260dp"
+        android:background="@drawable/customize_button"
+        android:text="@string/start_game"
+        android:textColor="@color/FloralWhite"
+        />
+
+
+</LinearLayout>

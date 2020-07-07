@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstActivity"
-    android:background="#DFF0FE"
+    android:background="@drawable/paws"
     android:orientation="vertical">
-
 
     <TextView
         android:layout_margin="30dp"
@@ -16,6 +15,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:background="@drawable/my_border"
         android:textColor="@color/colorPrimary"
         />
     <EditText
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:text="@string/zain"
         android:textAlignment="center"
+        android:background="@drawable/my_border"
         android:layout_margin="20dp"
         />
     <EditText
@@ -32,6 +33,7 @@
         android:layout_height="wrap_content"
         android:text="@string/sadia"
         android:textAlignment="center"
+        android:background="@drawable/my_border"
         android:layout_margin="20dp"
         />
     <EditText
@@ -40,6 +42,7 @@
         android:layout_height="wrap_content"
         android:text="@string/usama"
         android:textAlignment="center"
+        android:background="@drawable/my_border"
         android:layout_margin="20dp"
         />
     <EditText
@@ -48,6 +51,7 @@
         android:layout_height="wrap_content"
         android:text="@string/saleha"
         android:textAlignment="center"
+        android:background="@drawable/my_border"
         android:layout_margin="20dp"
         />
 
@@ -64,9 +68,7 @@
         android:background="@drawable/customize_button"
         android:onClick="btnStartClick"
         android:text="@string/start_game"
-        android:textColor="#FFFFFF" />
-
-
+        android:textColor="@color/FloralWhite" />
 
 
 </LinearLayout>
