@@ -5,6 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back"
+    android:orientation="vertical"
     tools:context=".Dare">
+
+    <TextView
+        android:id="@+id/assignedTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/my_border"
+        android:layout_marginTop="200dp"
+        android:textSize="20sp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="300dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/dareDone"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="20dp"
+            android:text="DONE!"
+            android:background="@color/LightPink"
+            />
+        <Button
+            android:id="@+id/dareForfeit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:text="FORFEIT :("
+            android:background="@color/LightPink"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
 
 </LinearLayout>

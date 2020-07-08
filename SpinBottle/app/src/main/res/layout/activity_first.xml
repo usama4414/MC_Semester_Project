@@ -63,11 +63,35 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="8dp"
 
         android:background="@drawable/customize_button"
         android:onClick="btnStartClick"
         android:text="@string/start_game"
+        android:textColor="@color/FloralWhite" />
+    <Button
+        android:id="@+id/add_dare_option"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/customize_button"
+        android:text="Add Dares Yourself"
+        android:textColor="@color/FloralWhite" />
+    <Button
+        android:id="@+id/add_truth_option"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/customize_button"
+        android:text="Add Truths Yourself"
         android:textColor="@color/FloralWhite" />
 
 
