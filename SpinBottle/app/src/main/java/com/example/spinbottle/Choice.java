@@ -7,10 +7,8 @@ import android.widget.Button;
 public class Choice extends AppCompatActivity {
     Button btn_truth;
     Button btn_dare;
-    String name1;
-    String name2;
-    String name3;
-    String name4;
+    String name1,name2,name3,name4,turn;
+    int scoreName1,scoreName2,scoreName3,scoreName4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +18,11 @@ public class Choice extends AppCompatActivity {
         name2 = extras.getString("Name2");
         name3 = extras.getString("Name3");
         name4 = extras.getString("Name4");
+        scoreName1=extras.getInt("Score1");
+        scoreName2=extras.getInt("Score2");
+        scoreName3=extras.getInt("Score3");
+        scoreName4=extras.getInt("Score4");
+        turn=   extras.getString("Turn");
         btn_truth= (Button) findViewById(R.id.btn_truth);
         btn_dare= (Button) findViewById(R.id.btn_dare);
         btn_truth.setOnClickListener(new View.OnClickListener()
@@ -31,6 +34,11 @@ public class Choice extends AppCompatActivity {
                 it.putExtra("Name2", name2);
                 it.putExtra("Name3", name3);
                 it.putExtra("Name4", name4);
+                it.putExtra("Score1",scoreName1);
+                it.putExtra("Score2",scoreName2);
+                it.putExtra("Score3",scoreName3);
+                it.putExtra("Score4",scoreName4);
+                it.putExtra("Turn",turn);
                 startActivity(it);
             }
         });
@@ -43,6 +51,11 @@ public class Choice extends AppCompatActivity {
                 it.putExtra("Name2", name2);
                 it.putExtra("Name3", name3);
                 it.putExtra("Name4", name4);
+                it.putExtra("Score1",scoreName1);
+                it.putExtra("Score2",scoreName2);
+                it.putExtra("Score3",scoreName3);
+                it.putExtra("Score4",scoreName4);
+                it.putExtra("Turn",turn);
                 startActivity(it);
             }
         });

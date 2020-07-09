@@ -13,10 +13,11 @@
         android:layout_width="434dp"
         android:layout_height="102dp"
         android:text="@string/welcome"
-        android:textColor="@color/Orchid"
-        android:textSize="52sp"
-        android:fontFamily="@font/dancingscript"
+
         android:gravity="center_horizontal"
+        android:textColor="@color/Orchid"
+        android:textSize="48sp"
+        android:fontFamily="@font/dancingscript"
         />
 
     <ImageView
@@ -34,6 +35,5 @@
         android:contentDescription="@string/spinning_bottle"
         app:srcCompat="@drawable/mylogo"
         android:layout_marginStart="20dp" />
-
 
 </LinearLayout>

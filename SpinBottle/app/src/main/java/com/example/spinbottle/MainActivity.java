@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     String name2;
     String name3;
     String name4;
-
+    int scoreName1,scoreName2,scoreName3,scoreName4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
         name2 = extras.getString("Name2");
         name3 = extras.getString("Name3");
         name4 = extras.getString("Name4");
-
+        scoreName1=extras.getInt("Score1");
+        scoreName2=extras.getInt("Score2");
+        scoreName3=extras.getInt("Score3");
+        scoreName4=extras.getInt("Score4");
         TextView tView1=findViewById(R.id.textView1);
         TextView tView2=findViewById(R.id.textView2);
         TextView tView3=findViewById(R.id.textView3);
@@ -115,6 +118,11 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("Name2", name2);
                 i.putExtra("Name3", name3);
                 i.putExtra("Name4", name4);
+                i.putExtra("Score1",scoreName1);
+                i.putExtra("Score2",scoreName2);
+                i.putExtra("Score3",scoreName3);
+                i.putExtra("Score4",scoreName4);
+                i.putExtra("Turn", turnL.getText().toString());
                 startActivity(i);
             }
 

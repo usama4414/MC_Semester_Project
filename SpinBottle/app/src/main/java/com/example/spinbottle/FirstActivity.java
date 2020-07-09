@@ -47,6 +47,10 @@ public class FirstActivity extends AppCompatActivity {
         i.putExtra("Name2", name2);
         i.putExtra("Name3", name3);
         i.putExtra("Name4", name4);
+        i.putExtra("Score1",0);
+        i.putExtra("Score2",0);
+        i.putExtra("Score3",0);
+        i.putExtra("Score4",0);
         startActivity(i);
     }
 }

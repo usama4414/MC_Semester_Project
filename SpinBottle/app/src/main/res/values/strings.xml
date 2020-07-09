@@ -13,4 +13,5 @@
     <string name="prompt">Enter here…</string>
     <string name="truth">Truth? </string>
     <string name="dare">Dare? </string>
+    <string name="play">Keep Playing</string>
 </resources>
