@@ -51,11 +51,11 @@ public class Choice extends AppCompatActivity {
                 it.putExtra("Name2", name2);
                 it.putExtra("Name3", name3);
                 it.putExtra("Name4", name4);
-                it.putExtra("Score1",scoreName1);
-                it.putExtra("Score2",scoreName2);
-                it.putExtra("Score3",scoreName3);
-                it.putExtra("Score4",scoreName4);
-                it.putExtra("Turn",turn);
+                it.putExtra("Score1", scoreName1);
+                it.putExtra("Score2", scoreName2);
+                it.putExtra("Score3", scoreName3);
+                it.putExtra("Score4", scoreName4);
+                it.putExtra("Turn", turn);
                 startActivity(it);
             }
         });

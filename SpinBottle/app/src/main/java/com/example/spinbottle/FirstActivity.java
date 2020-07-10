@@ -27,7 +27,8 @@ public class FirstActivity extends AppCompatActivity {
         add_truth_option.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent it = new Intent(getApplicationContext(), AddTruth.class);
+                startActivity(it);
             }
         });
     }

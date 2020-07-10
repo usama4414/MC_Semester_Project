@@ -6,43 +6,77 @@
     android:layout_height="match_parent"
     android:background="@drawable/back"
     android:orientation="vertical"
+    android:weightSum="12"
     tools:context=".Dare">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        />
 
     <TextView
         android:id="@+id/assignedTV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="5dp"
         android:background="@drawable/my_border"
-        android:layout_marginTop="150dp"
         android:textSize="20sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5"
         />
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:padding="20dp"
-        android:layout_marginTop="300dp"
-        android:orientation="horizontal"
-        >
+        android:layout_weight="2"
+        android:weightSum="5"
+        android:orientation="horizontal" >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            tools:ignore="NestedWeights" />
         <Button
             android:id="@+id/dareDone"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
             android:text="DONE!"
             android:fontFamily="@font/pacifico"
+            android:padding="2dp"
+            android:textSize="18sp"
             android:background="@color/LightPink"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             />
         <Button
             android:id="@+id/dareForfeit"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginLeft="40dp"
-            android:text="FORFEIT :("
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:text="FORFEIT"
             android:background="@color/LightPink"
             android:fontFamily="@font/pacifico"
-            android:layout_marginStart="40dp" />
+            android:padding="2dp"
+            android:textSize="18sp"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            />
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        />
 </LinearLayout>

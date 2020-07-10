@@ -12,7 +12,6 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class Dare extends AppCompatActivity {
-
     SqlLiteDataBase db;
     TextView assignedTV;
     Button dareDone,dareForfeit;
@@ -60,18 +59,16 @@ public class Dare extends AppCompatActivity {
                 {
                     scoreName4=scoreName4+1;
                 }
-                if (1==1){
-                    Intent i = new Intent(Dare.this, ScoreBoard.class);
-                    i.putExtra("Name1", name1);
-                    i.putExtra("Name2", name2);
-                    i.putExtra("Name3", name3);
-                    i.putExtra("Name4", name4);
-                    i.putExtra("Score1", scoreName1);
-                    i.putExtra("Score2", scoreName2);
-                    i.putExtra("Score3", scoreName3);
-                    i.putExtra("Score4", scoreName4);
-                    startActivity(i);
-                }
+                Intent i = new Intent(Dare.this, ScoreBoard.class);
+                i.putExtra("Name1", name1);
+                i.putExtra("Name2", name2);
+                i.putExtra("Name3", name3);
+                i.putExtra("Name4", name4);
+                i.putExtra("Score1", scoreName1);
+                i.putExtra("Score2", scoreName2);
+                i.putExtra("Score3", scoreName3);
+                i.putExtra("Score4", scoreName4);
+                startActivity(i);
             }
         });
         dareForfeit.setOnClickListener(new View.OnClickListener() {

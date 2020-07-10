@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="4dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/dareText"
+    android:ellipsize="marquee"
+    android:padding="3dp"
+    android:background="@color/DeepPink"
+    android:textColor="@color/FloralWhite"
+    android:singleLine="true"
+    android:fontFamily="@font/dancingscript"
+    android:textSize="18sp">
+
+</TextView>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteMe"
+        android:ellipsize="marquee"
+        android:padding="3dp"
+        android:background="@color/FloralWhite"
+        android:textColor="@color/DeepPink"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/dareText"
+        android:layout_toEndOf="@+id/dareText"
+        android:text="Delete"
+        android:fontFamily="@font/dancingscript"
+        android:textSize="18sp">
+
+    </TextView>
+
+</RelativeLayout>
