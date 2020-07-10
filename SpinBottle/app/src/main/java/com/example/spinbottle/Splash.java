@@ -21,6 +21,7 @@ public class Splash extends AppCompatActivity {
             public void run()
             {
                 try {
+
                     iv= (ImageView) findViewById(R.id.startLogoSpin);
                     rotate= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate);
                     iv.setVisibility(View.VISIBLE);
