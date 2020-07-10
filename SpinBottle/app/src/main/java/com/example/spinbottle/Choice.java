@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 public class Choice extends AppCompatActivity {
     Button btn_truth;
     Button btn_dare;
-    String name1,name2,name3,name4,turn;
+    TextView choiceString;
+    String name1,name2,name3,name4,turn, Mode;
     int scoreName1,scoreName2,scoreName3,scoreName4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,7 @@ public class Choice extends AppCompatActivity {
         name2 = extras.getString("Name2");
         name3 = extras.getString("Name3");
         name4 = extras.getString("Name4");
+        Mode = extras.getString("Mode");
         scoreName1=extras.getInt("Score1");
         scoreName2=extras.getInt("Score2");
         scoreName3=extras.getInt("Score3");
@@ -25,6 +29,9 @@ public class Choice extends AppCompatActivity {
         turn=   extras.getString("Turn");
         btn_truth= (Button) findViewById(R.id.btn_truth);
         btn_dare= (Button) findViewById(R.id.btn_dare);
+        choiceString=(TextView)findViewById(R.id.choiceString);
+        String ch= "Whoopsie "+ turn+ "'s turn, \n Make a Choice then?";
+        choiceString.setText(ch);
         btn_truth.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -39,6 +46,7 @@ public class Choice extends AppCompatActivity {
                 it.putExtra("Score3",scoreName3);
                 it.putExtra("Score4",scoreName4);
                 it.putExtra("Turn",turn);
+                it.putExtra("Mode",Mode);
                 startActivity(it);
             }
         });
@@ -56,6 +64,7 @@ public class Choice extends AppCompatActivity {
                 it.putExtra("Score3", scoreName3);
                 it.putExtra("Score4", scoreName4);
                 it.putExtra("Turn", turn);
+                it.putExtra("Mode",Mode);
                 startActivity(it);
             }
         });

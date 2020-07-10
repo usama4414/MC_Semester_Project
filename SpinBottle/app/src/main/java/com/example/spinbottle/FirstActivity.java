@@ -11,16 +11,21 @@ public class FirstActivity extends AppCompatActivity {
 
     Button add_truth_option;
     Button add_dare_option;
+    String Mode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+        Bundle extras = getIntent().getExtras();
+        Mode = extras.getString("Mode");
+
         add_dare_option= (Button)findViewById(R.id.add_dare_option);
         add_truth_option= (Button)findViewById(R.id.add_truth_option);
         add_dare_option.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(getApplicationContext(), AddDare.class);
+                it.putExtra("Mode",Mode);
                 startActivity(it);
             }
         });
@@ -28,6 +33,7 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(getApplicationContext(), AddTruth.class);
+                it.putExtra("Mode",Mode);
                 startActivity(it);
             }
         });
@@ -52,6 +58,7 @@ public class FirstActivity extends AppCompatActivity {
         i.putExtra("Score2",0);
         i.putExtra("Score3",0);
         i.putExtra("Score4",0);
+        i.putExtra("Mode",Mode);
         startActivity(i);
     }
 }

@@ -8,11 +8,11 @@
         tools:context=".Choice">
 
         <TextView
+            android:id="@+id/choiceString"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:text="@string/choice"
             android:textSize="40sp"
             android:textColor="@color/Chocolate"
             android:textStyle="bold"

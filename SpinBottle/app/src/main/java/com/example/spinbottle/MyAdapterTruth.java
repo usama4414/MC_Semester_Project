@@ -14,10 +14,12 @@ import java.util.List;
 public class MyAdapterTruth extends RecyclerView.Adapter<MyAdapterTruth.ViewHolder> {
     SqlLiteDataBase db;
     private List<String> values;
-    public MyAdapterTruth(List<String> myData, SqlLiteDataBase my_database)
+    String mode;
+    public MyAdapterTruth(List<String> myData, SqlLiteDataBase my_database,String Mode)
     {
         values=myData;
         db=my_database;
+        mode=Mode;
     }
 
     @NonNull
@@ -44,7 +46,8 @@ public class MyAdapterTruth extends RecyclerView.Adapter<MyAdapterTruth.ViewHold
                 if(position!=0)
                 {
                     remove(position);
-                    db.deleteTruth(name);
+
+
                 }
             }
         });

@@ -17,7 +17,7 @@ public class Truth extends AppCompatActivity {
     int scoreName2=0;
     int scoreName3=0;
     int scoreName4=0;
-    String name1,name2,name3,name4,turn;
+    String name1,name2,name3,name4,turn,Mode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +25,7 @@ public class Truth extends AppCompatActivity {
 
         truth_assignedTV= (TextView) findViewById(R.id.truth_assignedTV);
         db=new SqlLiteDataBase(this);
-        String assignTruth=db.getOneTruth(); //getting Truth from DB
-        truth_assignedTV.setText(assignTruth);
+        String assignTruth="";
         truthDone= (Button) findViewById(R.id.truthDone);
         truthForfeit= (Button) findViewById(R.id.truthForfeit);
         Bundle extras = getIntent().getExtras();
@@ -39,6 +38,10 @@ public class Truth extends AppCompatActivity {
         scoreName2=extras.getInt("Score2");
         scoreName3=extras.getInt("Score3");
         scoreName4=extras.getInt("Score4");
+        Mode= extras.getString("Mode");
+
+        truth_assignedTV.setText(assignTruth);
+
         truthDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +70,7 @@ public class Truth extends AppCompatActivity {
                 i.putExtra("Score2", scoreName2);
                 i.putExtra("Score3", scoreName3);
                 i.putExtra("Score4", scoreName4);
+                i.putExtra("Mode",Mode);
                 startActivity(i);
             }
         });
@@ -82,6 +86,7 @@ public class Truth extends AppCompatActivity {
                 i.putExtra("Score2",scoreName2);
                 i.putExtra("Score3",scoreName3);
                 i.putExtra("Score4",scoreName4);
+                i.putExtra("Mode",Mode);
                 startActivity(i);
             }
         });

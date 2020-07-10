@@ -19,15 +19,14 @@ public class Dare extends AppCompatActivity {
     int scoreName2=0;
     int scoreName3=0;
     int scoreName4=0;
-    String name1,name2,name3,name4,turn;
+    String name1,name2,name3,name4,turn,Mode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dare);
         assignedTV= (TextView) findViewById(R.id.assignedTV);
         db=new SqlLiteDataBase(this);
-        String assignDare=db.getOneDare();
-        assignedTV.setText(assignDare);
+        String assignDare="";
         dareDone= (Button) findViewById(R.id.dareDone);
         dareForfeit= (Button) findViewById(R.id.dareForfeit);
         Bundle extras = getIntent().getExtras();
@@ -40,6 +39,10 @@ public class Dare extends AppCompatActivity {
         scoreName2=extras.getInt("Score2");
         scoreName3=extras.getInt("Score3");
         scoreName4=extras.getInt("Score4");
+        Mode= extras.getString("Mode");
+
+        assignedTV.setText(assignDare);
+
         dareDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +71,7 @@ public class Dare extends AppCompatActivity {
                 i.putExtra("Score2", scoreName2);
                 i.putExtra("Score3", scoreName3);
                 i.putExtra("Score4", scoreName4);
+                i.putExtra("Mode",Mode);
                 startActivity(i);
             }
         });
@@ -83,6 +87,7 @@ public class Dare extends AppCompatActivity {
                 i.putExtra("Score2",scoreName2);
                 i.putExtra("Score3",scoreName3);
                 i.putExtra("Score4",scoreName4);
+                i.putExtra("Mode",Mode);
                 startActivity(i);
             }
         });

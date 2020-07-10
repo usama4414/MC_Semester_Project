@@ -15,6 +15,7 @@
         android:text="@string/welcome"
         android:textColor="@color/Orchid"
         android:textSize="52sp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/dancingscript"
         android:gravity="center_horizontal"
         />

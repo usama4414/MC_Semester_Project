@@ -12,10 +12,12 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     SqlLiteDataBase db;
     private List<String> values;
-    public MyAdapter(List<String> myData, SqlLiteDataBase my_database)
+    String mode;
+    public MyAdapter(List<String> myData, SqlLiteDataBase my_database,String Mode)
     {
         values=myData;
         db=my_database;
+        mode=Mode;
     }
     @NonNull
     @Override
@@ -41,7 +43,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 if(position!=0)
                 {
                     remove(position);
-                    db.deleteDare(name);
+
                 }
             }
         });

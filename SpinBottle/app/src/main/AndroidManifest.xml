@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddTruth"></activity>
+        <activity android:name=".Mode"></activity>
+        <activity android:name=".AddTruth" />
         <activity android:name=".ScoreBoard" />
         <activity android:name=".AddDare" />
         <activity android:name=".Dare" />

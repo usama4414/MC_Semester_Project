@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AddTruth extends AppCompatActivity {
@@ -22,12 +24,15 @@ public class AddTruth extends AppCompatActivity {
     RecyclerView truth_tvResult;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter mAdapter;
+    String Mode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_truth);
+        Bundle extras = getIntent().getExtras();
         db=new SqlLiteDataBase(this);
-        List<String> input= db.getTruthData();
+        Mode = extras.getString("Mode");
+        List<String> input= new ArrayList<String>();
 
         btn_add_truth=(Button)findViewById(R.id.btn_add_truth);
         truth_btn_go_back=(Button) findViewById(R.id.truth_btn_go_back);
@@ -36,7 +41,7 @@ public class AddTruth extends AppCompatActivity {
         truth_tvResult.setHasFixedSize(true);
         layoutManager=new LinearLayoutManager(this);
         truth_tvResult.setLayoutManager(layoutManager);
-        mAdapter=new MyAdapterTruth(input,db);
+        mAdapter=new MyAdapterTruth(input,db,Mode);
         truth_tvResult.setAdapter(mAdapter);
 
 
@@ -44,6 +49,7 @@ public class AddTruth extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(getApplicationContext(), FirstActivity.class);
+                it.putExtra("Mode",Mode);
                 startActivity(it);
             }
         });
@@ -57,7 +63,14 @@ public class AddTruth extends AppCompatActivity {
                 try
                 {
                     String truth=myTruth.getText().toString();
-                    db.insertTruth(truth);
+                    if (Mode.equals("Kids"))
+                    {
+                        db.insertKidsTruth(truth);
+                    }
+                    else
+                    {
+                        db.insertTruth(truth);
+                    }
                 }
                 catch(Exception ex)
                 {
@@ -78,8 +91,10 @@ public class AddTruth extends AppCompatActivity {
                         tv.setText("Successfully inserted.");
                         d.setContentView(tv);
                         d.show();
-                        List<String> input =db.getTruthData();
-                        mAdapter=new MyAdapterTruth(input,db);
+
+                        List<String> input = new ArrayList<String>();
+
+                        mAdapter=new MyAdapterTruth(input,db,Mode);
                         truth_tvResult.setAdapter(mAdapter);
                         myTruth.setText(null);
                         //tvResult.setText(input);

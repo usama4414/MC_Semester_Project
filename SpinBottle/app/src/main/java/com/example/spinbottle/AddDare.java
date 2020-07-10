@@ -23,14 +23,23 @@ public class AddDare extends AppCompatActivity {
     RecyclerView tvResult;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter mAdapter;
+    String Mode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_dare);
-
-
+        Bundle extras = getIntent().getExtras();
+        Mode = extras.getString("Mode");
         db=new SqlLiteDataBase(this);
-        List<String> input= db.getDareData();
+        List<String> input= new ArrayList<String>();
+        if(Mode.equals("Kids"))
+        {
+            input=db.getKidsDareData();
+        }
+        else
+        {
+            input=db.getDareData();
+        }
 
         btn_add_dare=(Button)findViewById(R.id.btn_add_dare);
         btn_go_back=(Button) findViewById(R.id.btn_go_back);
@@ -39,7 +48,7 @@ public class AddDare extends AppCompatActivity {
         tvResult.setHasFixedSize(true);
         layoutManager=new LinearLayoutManager(this);
         tvResult.setLayoutManager(layoutManager);
-        mAdapter=new MyAdapter(input,db);
+        mAdapter=new MyAdapter(input,db,Mode);
         tvResult.setAdapter(mAdapter);
 
 
@@ -47,6 +56,7 @@ public class AddDare extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(getApplicationContext(), FirstActivity.class);
+                it.putExtra("Mode",Mode);
                 startActivity(it);
             }
         });
@@ -60,7 +70,15 @@ public class AddDare extends AppCompatActivity {
                 try
                 {
                     String dare=myDare.getText().toString();
-                    db.insertDare(dare);
+                    if (Mode.equals("Kids"))
+                    {
+                        db.insertKidsDare(dare);
+                    }
+                    else
+                    {
+                        db.insertDare(dare);
+                    }
+
                 }
                 catch(Exception ex)
                 {
@@ -81,8 +99,16 @@ public class AddDare extends AppCompatActivity {
                         tv.setText("Successfully inserted.");
                         d.setContentView(tv);
                         d.show();
-                        List<String> input =db.getDareData();
-                        mAdapter=new MyAdapter(input,db);
+                        List<String> input =new ArrayList<String>();
+                        if(Mode.equals("Kids"))
+                        {
+                            input=db.getKidsDareData();
+                        }
+                        else
+                        {
+                            input=db.getDareData();
+                        }
+                        mAdapter=new MyAdapter(input,db,Mode);
                         tvResult.setAdapter(mAdapter);
                         myDare.setText(null);
                         //tvResult.setText(input);

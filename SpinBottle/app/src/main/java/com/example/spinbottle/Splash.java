@@ -32,7 +32,7 @@ public class Splash extends AppCompatActivity {
                     e.printStackTrace();
                 }finally
                 {
-                    Intent it=new Intent(Splash.this,FirstActivity.class);
+                    Intent it=new Intent(Splash.this,Mode.class);
                     startActivity(it);
                 }
             }
