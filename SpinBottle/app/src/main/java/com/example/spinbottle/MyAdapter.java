@@ -43,7 +43,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 if(position!=0)
                 {
                     remove(position);
-
+                    if (mode.equals("Kids"))
+                    {
+                        db.deleteKidsDare(name);
+                    }
+                    else
+                    {
+                        db.deleteDare(name);
+                    }
                 }
             }
         });

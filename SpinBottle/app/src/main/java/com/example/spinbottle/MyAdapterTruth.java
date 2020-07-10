@@ -46,7 +46,14 @@ public class MyAdapterTruth extends RecyclerView.Adapter<MyAdapterTruth.ViewHold
                 if(position!=0)
                 {
                     remove(position);
-
+                    if (mode.equals("Kids"))
+                    {
+                        db.deleteKidsTruth(name);
+                    }
+                    else
+                    {
+                        db.deleteTruth(name);
+                    }
 
                 }
             }

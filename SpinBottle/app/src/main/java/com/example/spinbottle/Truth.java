@@ -39,7 +39,13 @@ public class Truth extends AppCompatActivity {
         scoreName3=extras.getInt("Score3");
         scoreName4=extras.getInt("Score4");
         Mode= extras.getString("Mode");
-
+        if (Mode.equals("Kids"))
+        {
+            assignTruth=db.getOneKidsTruth();
+        }
+        else{
+            assignTruth=db.getOneTruth(); //getting Truth from DB
+        }
         truth_assignedTV.setText(assignTruth);
 
         truthDone.setOnClickListener(new View.OnClickListener() {

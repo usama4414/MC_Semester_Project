@@ -40,7 +40,14 @@ public class Dare extends AppCompatActivity {
         scoreName3=extras.getInt("Score3");
         scoreName4=extras.getInt("Score4");
         Mode= extras.getString("Mode");
-
+        if (Mode.equals("Kids"))
+        {
+            assignDare=db.getOneKidsDare();
+        }
+        else
+        {
+            assignDare=db.getOneDare();
+        }
         assignedTV.setText(assignDare);
 
         dareDone.setOnClickListener(new View.OnClickListener() {
